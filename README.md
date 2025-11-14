@@ -16,5 +16,5 @@
 ### Improvements coming soon
 - files stored in s3/tigris bucket, they are currently stored on the system
 - ability to retrieve uploaded files and transcriptions by id (currently the system stores everything but only has an endpoint for the latest transcription)
-- proper queue with ws implementation to notify completion (currently served by status endpoint that must be polled)
+- proper queue via s3/tigris bucket with ws implementation to notify completion (currently served by status endpoint that must be polled)
 - dynamic gateway signatures to prevent unauthorized access (currently this is done by placing the service behind an auth + reverse proxy microservice)
