@@ -1,0 +1,24 @@
+# flyctl launch added from polinaenv/.gitignore
+# Created by venv; see https://docs.python.org/3/library/venv.html
+polinaenv/**/*
+fly.toml
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.log
+outputs/
+uploads/
+.wget-hf/
+.cache/
+.whisperx/
+models/
+checkpoints/
+*.pt
+*.bin
+.env
+# uv cache
+.uv/
+
