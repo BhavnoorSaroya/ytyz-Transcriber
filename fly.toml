@@ -1,0 +1,34 @@
+# fly.toml app configuration file generated for polina-gpu on 2025-11-14T00:59:43-08:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'polina-gpu'
+primary_region = 'ord'
+vm.size = "a100-40gb"
+
+#[build]
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+
+[checks.status]
+  port = 8080
+  type = "http"
+  interval = "20s"
+  timeout = "15s"
+  path = "/status"
+  grace_period = "90s"
+  failure_threshold = 10
+  success_threshold = 1
+
+
+
+[env]
+  HF_TOKEN="your-token-here"
